@@ -4,7 +4,7 @@ This file contains docs blocks for Bingeflix sources
 ## Users
 This section contains documentation from the Bingeflix Users table.
 {% docs bingeflix_user_table %}
-This table stores information about Bingeflix users, including user IDs, usernames, email addresses, subscription start dates, and other relevant user details. 
+This table stores information about Bingeflix users, including user IDs, usernames, email addresses, subscription start dates, and other relevant user details.
 {% enddocs %}
 
 {% docs bingeflix_user_id %}
@@ -133,7 +133,7 @@ The unique identifier of the ad campaign
 #{% enddocs %}
 
 #{% docs bingeflix_ads_spend %}
-The amount spent on the ad campaign 
+The amount spent on the ad campaign
 #{% enddocs %}
 
 #{% docs bingeflix_ads_cpm %}
@@ -143,8 +143,3 @@ The average cost per 1,000 impressions
 #{% docs bingeflix_ads_ctr %}
 The average click-through rate on ads served
 #{% enddocs %}
-
-
-
-
-

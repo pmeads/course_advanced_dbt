@@ -33,5 +33,3 @@ models:
         description:  '{{ doc("bingeflix_event_name") }}'
         tests:
           - not_null
-
-
