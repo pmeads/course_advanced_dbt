@@ -1,0 +1,24 @@
+version: 2
+
+macros:
+    - name: window_with_coalesce
+      description: Create a default value using coalesce if a windowing function returns null
+      arguments:
+          - name: agg_func
+            type: string
+            description: The aggregate function to use in the window
+          - name: column_name
+            type: string
+            description: The column to evaluate in the window
+          - name: partition_by
+            type: string
+            description: How we will partion the window; the range of the window
+          - name: order_by
+            type: string
+            description: How we will order the results of each window. if this value is blank(''), the order by clause is ommitted
+          - name: value_if_null
+            type: string
+            description: The value to use if the window returns null. Defalut is empty string ('')
+          - name: col_alias
+            type: string
+            description: The alias we will rename the column to. If this value is blank (''), the alias is ommitted
