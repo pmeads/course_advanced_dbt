@@ -1,0 +1,40 @@
+seeds:
+  - name: unit_test_input_dim_dates
+    config:
+      column_types:
+        calendar_date: date
+        date_week: date
+        date_month: date
+        date_quarter: date
+        date_year: date
+        day_of_month: number(38, 0)
+        year_num: number(38, 0)
+        quarter_num: number(38, 0)
+        month_num: number(38, 0)
+  - name: unit_test_input_dim_subscriptions
+    config:
+      column_types:
+        subscription_id: number(38, 0)
+        subscription_plan_id: number(38, 0)
+        user_id: number(38, 0)
+        starts_at: timestamp_ntz
+        ends_at: timestamp_ntz
+        plan_name: varchar(128)
+        pricing: float
+        billing_period: varchar(128)
+  - name: unit_test_output_mrr
+    config:
+      column_types:
+        surrogate_key: varchar
+        date_month: date
+        user_id: number(38, 0)
+        subscription_id: number(38, 0)
+        starts_at: timestamp_ntz
+        ends_at: timestamp_ntz
+        plan_name: varchar
+        mrr_amount: float
+        mrr_change: float
+        retained_mrr_amount: float
+        previous_month_mrr_amount: float
+        change_category: varchar
+        month_retained_number: number(38, 0)

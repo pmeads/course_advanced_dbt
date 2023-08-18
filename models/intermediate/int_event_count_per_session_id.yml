@@ -5,7 +5,7 @@ models:
       - name: session_id
         description: The unique identifier for the session.
         tests:
-          - not_null
+          - not_null (this test has already been performed at the staging layer)
           - unique
 
       - name: user_logged_in_count
