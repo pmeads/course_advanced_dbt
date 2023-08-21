@@ -22,7 +22,7 @@ seeds:
         plan_name: varchar(128)
         pricing: float
         billing_period: varchar(128)
-  - name: unit_test_output_mrr
+  - name: unit_test_output_fct_mrr
     config:
       column_types:
         surrogate_key: varchar
