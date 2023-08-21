@@ -1,20 +1,33 @@
-WITH source AS (
+{{
+    config(
+        materialized='incremental',
+        unique_key='event_id'
+    )
+}}
 
-    SELECT * FROM {{ source('bingeflix', 'events') }}
+with source as (
+
+    select * from {{ source('bingeflix', 'events') }}
+
+{% if is_incremental() %}
+
+  {{ incremental_where_clause() }}
+
+{% endif %}
 
 ),
 
-renamed AS (
+renamed as (
 
-    SELECT
+    select
         session_id,
         created_at,
         user_id,
         event_name,
         event_id
 
-    FROM source
+    from source
 
 )
 
-SELECT * FROM renamed
+select * from renamed
